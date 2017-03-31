@@ -75,3 +75,21 @@ Also call clean() method if you are printing a Janitor object. Call printEmploye
 	}
 
 
+//Employee Main
+public class Main_Employee {
+    public static void main (String []args) {
+        Janitor J = new Janitor();
+        Lawyer L = new Lawyer();
+        Harvard_lawyer H = new Harvard_lawyer();
+
+        printEmployee(J);
+        printEmployee(L);
+        printEmployee(H);
+    }
+
+    public static void printEmployee(Employee e){
+        System.out.print(e.toString());
+    }
+}
+
+
