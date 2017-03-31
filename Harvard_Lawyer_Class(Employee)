@@ -1,0 +1,30 @@
+//Harvard Lawyer
+
+public class Harvard_lawyer extends Lawyer{
+    private int hours;
+    private double salary;
+    private int vacationDays;
+    //private String vacationForm;
+
+    public Harvard_lawyer(){
+        hours = super.getHours();
+        salary = (super.getSalary() * .2) + super.getSalary();
+        vacationDays = super.getVacationDays() + 8;
+        //this.vacationForm = "pinkpinkpinkpink";
+    }
+//    public Harvard_Lawyer(int hours, double salary, int vacationDays, String vacationForm) {
+//        this.hours = hours;
+//        this.salary = salary;
+//        this.vacationDays = vacationDays;
+//        this.vacationForm = vacationForm;
+//    }
+    @Override
+    public String toString() {
+        return "Harvard_Lawyer:" + "\n" +
+                "hours=" + hours +
+                "," + "\n" + "salary=" + salary +
+                "," + "\n" + "vacationDays=" + vacationDays +
+                "," + "\n" +"vacationForm='" + getVacationForm()+getVacationForm()+getVacationForm()+getVacationForm()
+                + "\n"+ sue() + "\n" + "\n";
+    }
+}
