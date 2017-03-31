@@ -1,0 +1,32 @@
+//Janitor Class
+
+public class Janitor extends Employee {
+    private int hours;
+    private double salary;
+    private int vacationDays;
+
+    public Janitor() {
+        hours = super.getHours() * 2;
+        salary = super.getSalary() - 10000;
+        vacationDays = super.getVacationDays() - 5;
+    }
+
+    public Janitor(int hours, double salary, int vacationDays, String vacationForm) {
+        super(hours, salary, vacationDays, vacationForm);
+    }
+
+
+    public String clean(){
+        return "CLEANING!";
+    }
+
+
+    @Override
+    public String toString() {
+        return "Janitor:" + "\n" +
+                "hours=" + hours  +
+                ","+  "\n" +  "salary=" + salary +
+                ","+"\n"+ "vacationDays=" + vacationDays + "\n"+ clean() + "\n" + "\n";
+    }
+}
+
