@@ -1,0 +1,59 @@
+Write a class called Date that includes three fields year, month and day. 
+This class stores information about a single date (year, month and day). 
+
+//comparable mthod
+public class Dates implements Comparable <Dates>{
+		private String year;
+		private String month;
+		private String day;
+	public Dates (String Month, String Day, String Year){
+		this.month = Month;
+		this.day = Day;
+		this.year = Year;
+	}
+	public String getMonths(){
+		return month;
+	}
+	public String getDay(){
+		return day;
+	}
+	public String getYear(){
+		return year;
+	}
+	public void setMonths(String x){
+		this.month = x;
+	}
+	public void setMDay(String y){
+		this.day = y;
+	}
+	public void setYear(String z){
+		this.year = z;
+	}
+	public int compareTo (Dates other){
+		if(year.compareTo(other.getYear()) ==0){
+			return (this.getYear().compareTo(other.getYear()));
+		}else{
+			return (this.getMonths().compareTo(other.getMonths()));
+		}
+	}
+	public String ToString(){
+		return "birthdays = [" + month + "," + day + "," + year + "]";
+	}
+}
+
+
+//using the above
+
+List <Dates> dates = new ArrayList<Dates>();{
+			 dates.add(new Dates ("4", "13", "1743"));   // Jefferson         
+			 dates.add(new Dates ("2", "22", "1732"));   // Washington         
+			 dates.add(new Dates ("3", "16", "1751"));   // Madison         
+			 dates.add(new Dates ("10", "30", "1735"));  // Adams         
+			 dates.add(new Dates ("4", "28", "1758"));   // Monroe 
+		}
+		for (int i =0; i<dates.size(); i++)
+		System.out.print("[" + dates.get(i).getMonths() + "," + dates.get(i).getDay() + "," + dates.get(i).getYear()+ "]" + " ");
+		Collections.sort(dates);
+		System.out.println("");
+		for (int i =0; i<dates.size(); i++)
+			System.out.print("[" + dates.get(i).getMonths() + "," + dates.get(i).getDay() + "," + dates.get(i).getYear() +"]" +" ");
