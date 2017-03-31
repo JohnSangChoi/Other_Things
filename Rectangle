@@ -1,0 +1,56 @@
+ Write an instance method called area that will be placed inside the Rectangle class. The method returns the area of the rectangle.  
+ Write another instance method called changeSize that will be placed inside the Rectangle class. This method changes the height and width of the rectangle. 
+The method accepts newWidth and newHeight as parameters and changes the value of width and height to this new width and height. 
+ Write the client class RectangleClient that creates an object of class Rectangle and initializes its x coordinate, y coordinates, width and height to 5, 12, 4, and 8 respectively. 
+Print out the x- coordinate, y-coordinate, width, height (using toString method) and area of this rectangle. Then change the size of this rectangle to width = 3 and height = 10 and then print out the x- coordinate, y-coordinate, width, height area again
+
+public class Rectangle {
+	private int x;
+	private int y;
+	private int width;
+	private int height;
+public Rectangle (int X, int Y, int w, int h){
+	x = X;
+	y = Y;
+	width = w;
+	height = h;
+}
+public int getX(){
+	return x;
+}
+public int getY(){
+	return y;
+}
+public int getW(){
+	return width;
+}
+public int getH(){
+	return height;
+}
+public String toString(){
+	return  "coordinate is (" + x + "," + y +") and demension is " + width + " X " + height + " where " + width + " is width and " + height + " is height";
+}
+public void area(int width,int height){
+	System.out.println("Area is:" + width * height);
+}
+public void changeSize( int newWidth, int newHeight){
+	width = newWidth;
+	height = newHeight;
+}
+	}
+//the end
+
+
+//client class
+public class RectangleClient {
+	public static void main(String [] args){
+		Rectangle r1 = new Rectangle(5,12,4,8);
+		System.out.println(r1);
+		r1.area(4,8);
+		r1.changeSize(3,10);
+		System.out.println(r1);
+		r1.area(3,10);
+	}
+
+}
+//the end
