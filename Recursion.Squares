@@ -1,0 +1,22 @@
+/* Write a recursive method called writeSquares that accepts an integer parameter n and prints the first n squares separated by commas,
+with the even squares in descending order followed by the odd squares in ascending order */
+
+public static void writeSquares(int n){
+			if ( n == 1){
+				System.out.print("1");
+				return ;
+			}
+			if ((n%2) == 0){
+				//calls evens first
+				System.out.print((n*n) + " , ");
+				//comma separates the vales
+			}
+			writeSquares(n-1);
+			//runs until base case~
+			if ((n%2) != 0){
+				//calls odd numbers
+				System.out.print(" ," +(n*n));
+				System.out.print("");
+				
+			}
+		}
