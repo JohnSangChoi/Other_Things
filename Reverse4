@@ -1,0 +1,19 @@
+//Write a java program that calls a method called reverse4 that accepts an ArrayList of integer values as a parameter and reverses each successive sequence of four values in the list. 
+//If the list has extra values that are not part of a sequence of four, those values are unchanged.
+
+public static void reverse4(ArrayList <Integer> rows){
+		System.out.println();
+		System.out.println(rows);
+		for (int i = 0; i<rows.size() - 3; i+=4){
+			int n1 = rows.get(i);
+			int n4 = rows.get(i+3);
+			int n2 = rows.get(i+1);
+			int n3 = rows.get(i+2);
+			rows.set(i, n4);
+			rows.set(i+3,  n1);
+			rows.set(i+2, n2);
+			rows.set(i+1, n3);
+		}
+		System.out.println(rows);
+	
+	}
